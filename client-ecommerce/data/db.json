@@ -1,0 +1,246 @@
+
+{
+    "products": [
+        {
+            "id": 205082351,
+            "name": "Walk London Milano lace up boots in black leather",
+            "description": "Demo description",
+            "categoryId": 1,
+            "size": [
+               "M",
+               "L",
+               "S"
+            ],
+            "productionDate": "2021-10-31T09:00:00.594Z",
+            "price": {
+                "current": {
+                    "value": 115,
+                    "text": "$115.00"
+                }
+            },
+            "brandName": "WALK LONDON",
+            "imageUrl": "images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-1-black",
+            "additionalImageUrls": [
+                "images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-1-black",
+                "images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-2",
+                "images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-3",
+                "images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-4"
+            ]
+        },
+        {
+            "id": 182738495,
+            "name": "Walk London Milano lace up boots in black leather",
+            "description": "Demo description",
+            "categoryId": 1,
+            "size": [
+               "M",
+               "L",
+               "S"
+            ],
+            "productionDate": "2021-10-31T09:00:00.594Z",
+            "price": {
+                "current": {
+                    "value": 115,
+                    "text": "$115.00"
+                }
+            },
+            "brandName": "WALK LONDON",
+            "imageUrl": "images.asos-media.com/products/tommy-hilfiger-corporate-pool-sliders-in-desert-sky/205102335-1-desertsky",
+            "additionalImageUrls": [
+                "images.asos-media.com/products/tommy-hilfiger-corporate-pool-sliders-in-desert-sky/205102335-1-desertsky",
+                "images.asos-media.com/products/tommy-hilfiger-corporate-pool-sliders-in-desert-sky/205102335-2",
+                "images.asos-media.com/products/tommy-hilfiger-corporate-pool-sliders-in-desert-sky/205102335-3",
+                "images.asos-media.com/products/tommy-hilfiger-corporate-pool-sliders-in-desert-sky/205102335-4"
+            ]
+        },
+        {
+            "id": 819203848,
+            "name": "Tommy Hilfiger running sneakers in black",
+            "description": "Demo description",
+            "categoryId": 1,
+            "size": [
+               "M",
+               "L",
+               "S"
+            ],
+            "productionDate": "2021-10-31T09:00:00.594Z",
+            "price": {
+                "current": {
+                    "value": 115,
+                    "text": "$115.00"
+                }
+            },
+            "brandName": "Tommy Hilfiger",
+            "imageUrl": "images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-1-black",
+            "additionalImageUrls": [
+                "images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-1-black",
+                "images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-2",
+                "images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-3",
+                "images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-4"
+            ]
+        },
+        {
+            "id": 102938456,
+            "name": "Tommy Hilfiger running sneakers in black",
+            "description": "Demo description",
+            "categoryId": 1,
+            "size": [
+               "M",
+               "L",
+               "S"
+            ],
+            "productionDate": "2021-10-31T09:00:00.594Z",
+            "price": {
+                "current": {
+                    "value": 115,
+                    "text": "$115.00"
+                }
+            },
+            "brandName": "Tommy Hilfiger",
+            "imageUrl": "images.asos-media.com/products/tommy-hilfiger-running-sneakers-in-black/205102326-1-black",
+            "additionalImageUrls": [
+                "images.asos-media.com/products/tommy-hilfiger-running-sneakers-in-black/205102326-1-black",
+                "images.asos-media.com/products/tommy-hilfiger-running-sneakers-in-black/205102326-2",
+                "images.asos-media.com/products/tommy-hilfiger-running-sneakers-in-black/205102326-3",
+                "images.asos-media.com/products/tommy-hilfiger-running-sneakers-in-black/205102326-4"
+            ]
+        },
+        {
+            "id": 172839505,
+            "name": "GG LINEN BLEND CANVAS SHIRT",
+            "description": "Inspired by the summer spirit and beach clubs on the Italian coast, this item is part of Gucci Lido. Emblematic codes of the House and refined patterns are reinterpreted in contemporary ways for the Pre-Fall collection. This linen blend shirt is defined by the distinctive GG motif, paying homage to the House's founder, Guccio Gucci.",
+            "categoryId": 1,
+            "size": [
+               "M",
+               "L",
+               "S"
+            ],
+            "productionDate": "2021-10-31T09:00:00.594Z",
+            "price": {
+                "current": {
+                    "value": 1280,
+                    "text": "$1280.00"
+                }
+            },
+            "brandName": "Gucci",
+            "imageUrl": "images.asos-media.com/products/tommy-jeans-retro-basket-essential-sneakers-in-navy/205136837-1-twilightnavy",
+            "additionalImageUrls": [
+                "images.asos-media.com/products/tommy-hilfiger-core-suede-leather-boots-in-cocoa/205102248-1-cocoa",
+                "images.asos-media.com/products/tommy-hilfiger-core-suede-leather-boots-in-cocoa/205102248-2",
+                "images.asos-media.com/products/tommy-hilfiger-core-suede-leather-boots-in-cocoa/205102248-3",
+                "images.asos-media.com/products/tommy-hilfiger-core-suede-leather-boots-in-cocoa/205102248-4"
+            ]
+        },
+        {
+            "id": 572839304,
+            "name": "EXTRA FINE RIB WOOL AND SILK CARDIGAN",
+            "description": "An essential part of the Pre-Fall collection's ready-to-wear-offering, knitwear with a fine touch and rich texture makes an ideal transition into the new season. This streamlined cardigan is presented in a fine rib wool and silk and defined by a subtle Gucci intarsia.",
+            "categoryId": 4,
+            "size": [
+               "M",
+               "L",
+               "S"
+            ],
+            "productionDate": "2021-10-31T09:00:00.594Z",
+            "price": {
+                "current": {
+                    "value": 1800,
+                    "text": "$1800.00"
+                }
+            },
+            "brandName": "Gucci",
+            "imageUrl": "images.asos-media.com/products/nike-blazer-mid-77-vintage-sneakers-in-white/204525320-1-white",
+            "additionalImageUrls": [
+                "images.asos-media.com/products/nike-blazer-mid-77-vintage-sneakers-in-white/204525320-1-white",
+                "images.asos-media.com/products/nike-blazer-mid-77-vintage-sneakers-in-white/204525320-2",
+                "images.asos-media.com/products/nike-blazer-mid-77-vintage-sneakers-in-white/204525320-3",
+                "images.asos-media.com/products/nike-blazer-mid-77-vintage-sneakers-in-white/204525320-4"
+            ]
+        },
+        {
+            "id": 963827182,
+            "name": "EXTRA FINE RIB WOOL AND SILK CARDIGAN",
+            "description": "An essential part of the Pre-Fall collection's ready-to-wear-offering, knitwear with a fine touch and rich texture makes an ideal transition into the new season. This streamlined cardigan is presented in a fine rib wool and silk and defined by a subtle Gucci intarsia.",
+            "categoryId": 4,
+            "size": [
+               "M",
+               "L",
+               "S"
+            ],
+            "productionDate": "2021-10-31T09:00:00.594Z",
+            "price": {
+                "current": {
+                    "value": 1800,
+                    "text": "$1800.00"
+                }
+            },
+            "brandName": "Gucci",
+            "imageUrl": "images.asos-media.com/products/nike-blazer-mid-77-vintage-sneakers-in-white/204525320-1-white",
+            "additionalImageUrls": [
+                "images.asos-media.com/products/nike-blazer-mid-77-vintage-sneakers-in-white/204525320-1-white",
+                "images.asos-media.com/products/nike-blazer-mid-77-vintage-sneakers-in-white/204525320-2",
+                "images.asos-media.com/products/nike-blazer-mid-77-vintage-sneakers-in-white/204525320-3",
+                "images.asos-media.com/products/nike-blazer-mid-77-vintage-sneakers-in-white/204525320-4"
+            ]
+        },
+        {
+            "id": 782910293,
+            "name": "EXTRA FINE RIB WOOL AND SILK CARDIGAN",
+            "description": "An essential part of the Pre-Fall collection's ready-to-wear-offering, knitwear with a fine touch and rich texture makes an ideal transition into the new season. This streamlined cardigan is presented in a fine rib wool and silk and defined by a subtle Gucci intarsia.",
+            "categoryId": 4,
+            "size": [
+               "M",
+               "L",
+               "S"
+            ],
+            "productionDate": "2021-10-31T09:00:00.594Z",
+            "price": {
+                "current": {
+                    "value": 1800,
+                    "text": "$1800.00"
+                }
+            },
+            "brandName": "Gucci",
+            "imageUrl": "images.asos-media.com/products/nike-blazer-mid-77-vintage-sneakers-in-white/204525320-1-white",
+            "additionalImageUrls": [
+                "images.asos-media.com/products/nike-blazer-mid-77-vintage-sneakers-in-white/204525320-1-white",
+                "images.asos-media.com/products/nike-blazer-mid-77-vintage-sneakers-in-white/204525320-2",
+                "images.asos-media.com/products/nike-blazer-mid-77-vintage-sneakers-in-white/204525320-3",
+                "images.asos-media.com/products/nike-blazer-mid-77-vintage-sneakers-in-white/204525320-4"
+            ]
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Sports wear"
+        },
+        {
+            "id": 2,
+            "name": "Formal wear"
+        },
+        {
+            "id": 3,
+            "name": "Business attire"
+        },
+        {
+            "id": 4,
+            "name": "Womenswear"
+        },
+        {
+            "id": 5,
+            "name": "Menswear"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "firstName": "Aleksandar",
+            "lastname": "Kuzmanovic",
+            "email": "kuzma@gmail.com",
+            "phone": "061123231",
+            "address": "Marka Markovica 252",
+            "password": "1233214321"
+        }
+    ]
+}
