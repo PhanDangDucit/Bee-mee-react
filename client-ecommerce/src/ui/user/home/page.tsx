@@ -4,16 +4,14 @@ import ProductElement from "@/ui/components/ProductElement";
 import { TProduct } from "@/helpers/definitions";
 import { useEffect, useState } from "react";
 import { nanoid } from "@reduxjs/toolkit";
+import { getAllEntity } from "@/utils/axios-method";
 
 export default function Page() {
     const [products, setProducts] = useState<TProduct[]>();
 
     useEffect(() => {
-        fetch('http://localhost:8080/products')
-        .then((res) => res.json())
-        .then((datas) => setProducts(datas))
-        .catch((err) =>console.error(err));
-    }, [])
+        getAllEntity("products").then(data => setProducts(data));
+    }, [products])
 
     if(!products) return null;
 
