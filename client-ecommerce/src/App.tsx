@@ -5,15 +5,22 @@ import Categories from '@/ui/admin/categories/page';
 import ProductsComponent from '@/ui/admin/products/page';
 
 import { Route, Routes } from 'react-router-dom';
+import LoginPage from '@/ui/user/signin/page';
+import Register from '@/ui/user/signup/page';
 
 const App = () => {
     return (
         <>
             <Routes>
+                {/* Public routes */}
+                <Route path='/' element={<Home/>}></Route>
+                <Route path='/signin' element={<LoginPage/>}></Route>
+                <Route path='/signup' element={<Register/>}></Route>
+
+                {/* Admin routes */}
                 <Route path='/admin' element={<HomeAdmin/>}></Route>
                 <Route path='/admin/categories' element={<Categories/>}></Route>
                 <Route path='/admin/products' element={<ProductsComponent/>}></Route>
-                <Route path='/' element={<Home/>}></Route>
             </Routes>
         </>
     )

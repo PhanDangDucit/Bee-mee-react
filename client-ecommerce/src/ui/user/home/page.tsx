@@ -8,10 +8,10 @@ import { getAllEntity } from "@/utils/axios-method";
 
 export default function Page() {
     const [products, setProducts] = useState<TProduct[]>();
-
+    
     useEffect(() => {
         getAllEntity("products").then(data => setProducts(data));
-    }, [products])
+    }, [])
 
     if(!products) return null;
 

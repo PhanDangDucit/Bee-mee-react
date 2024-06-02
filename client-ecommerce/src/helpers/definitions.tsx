@@ -1,10 +1,9 @@
 export type TProduct = {
-    id:number,
+    id:string,
     name: string,
     brandName:string,
     description:string,
     categoryId:number,
-    availableSizes:Array<number>,
     productionDate:string,
     price:{
         current: {
@@ -16,7 +15,7 @@ export type TProduct = {
     additionalImageUrls: Array<TImages>
 }
 
-export type TImages = Array<string>
+export type TImages = string
 
 export type TUser = {
     id: number,
@@ -27,4 +26,9 @@ export type TUser = {
     phone: string,
     username: string,
     password:string,
+}
+
+export type TCategories = {
+    id: string,
+    name: string,
 }
