@@ -7,6 +7,7 @@ import ProductsComponent from '@/ui/admin/products/page';
 import { Route, Routes } from 'react-router-dom';
 import LoginPage from '@/ui/user/signin/page';
 import Register from '@/ui/user/signup/page';
+import { DetailProductPage } from './ui/user/detail/page';
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
                 <Route path='/' element={<Home/>}></Route>
                 <Route path='/signin' element={<LoginPage/>}></Route>
                 <Route path='/signup' element={<Register/>}></Route>
+                <Route path='/detail/:id' element={<DetailProductPage/>}></Route>
 
                 {/* Admin routes */}
                 <Route path='/admin' element={<HomeAdmin/>}></Route>
