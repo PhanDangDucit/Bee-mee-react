@@ -11,20 +11,18 @@ import { DetailProductPage } from './ui/user/detail/page';
 
 const App = () => {
     return (
-        <>
-            <Routes>
-                {/* Public routes */}
-                <Route path='/' element={<Home/>}></Route>
-                <Route path='/signin' element={<LoginPage/>}></Route>
-                <Route path='/signup' element={<Register/>}></Route>
-                <Route path='/detail/:id' element={<DetailProductPage/>}></Route>
+        <Routes>
+            {/* Public routes */}
+            <Route path='/' element={<Home/>}></Route>
+            <Route path='/signin' element={<LoginPage/>}></Route>
+            <Route path='/signup' element={<Register/>}></Route>
+            <Route path='/detail/:id' element={<DetailProductPage/>}></Route>
 
-                {/* Admin routes */}
-                <Route path='/admin' element={<HomeAdmin/>}></Route>
-                <Route path='/admin/categories' element={<Categories/>}></Route>
-                <Route path='/admin/products' element={<ProductsComponent/>}></Route>
-            </Routes>
-        </>
+            {/* Admin routes */}
+            <Route path='/admin' element={<HomeAdmin/>}></Route>
+            <Route path='/admin/categories' element={<Categories/>}></Route>
+            <Route path='/admin/products' element={<ProductsComponent/>}></Route>
+        </Routes>
     )
 }
 

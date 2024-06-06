@@ -1,21 +1,22 @@
 import LayoutUser from "@/ui/user/layout";
 import LayoutHome from "@/ui/user/home/layout";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import {useEffect, useState } from "react";
 import { getOneEntity } from "@/utils/axios-method";
 import { Description } from "@/ui/components/users/detail/description";
 import { Review } from "@/ui/components/users/detail/review";
+import { ButtonSize } from "@/ui/components/users/detail/button";
 
 export const DetailProductPage = () => {
-    const {id} = useParams();
+    const { id } = useParams();
     const [product, setProduct] = useState();
-    
+
     useEffect(() => {
         if(id) {
             getOneEntity("products", id).then(data => setProduct(data));
         }
     }, [id])
-
+    
     if(!product) return;
     return (
         <LayoutUser>
@@ -28,6 +29,7 @@ export const DetailProductPage = () => {
                                 alt={product["name"]} 
                                 className="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
                             />
+                            {/* Right - section */}
                             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                                 <h2 className="text-sm title-font text-gray-500 tracking-widest">BRAND NAME</h2>
                                 <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{product["brandName"]}</h1>
@@ -68,46 +70,21 @@ export const DetailProductPage = () => {
                                         </a>
                                     </span>
                                 </div>
-                                <p className="leading-relaxed">{product["description"]}</p>
+                                {/*  */}
+                                <ul className="mt-6 space-y-6 text-[#333]">
+                                    <li className="text-sm">CATEGORY <span className="ml-4 float-right">{product["category"]}</span></li>
+                                    <li className="text-sm">Free Ship <span className="ml-4 float-right">Free</span></li>
+                                    <li className="text-sm">Discount<span className="ml-4 float-right">30%</span></li>
+                                </ul>
+                                
                                 <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
-                                {/* Color */}
-                                <div className="flex">
-                                    <span className="mr-3">Color</span>
-                                    <button 
-                                        className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none" 
-                                    />
-                                    <button 
-                                        className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"
-                                    />
-                                    <button 
-                                        className="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"
-                                    />
-                                </div>
-                                {/* Size */}
-                                <div className="flex ml-6 items-center">
-                                    <span className="mr-3">Size</span>
-                                    <div className="relative">
-                                    <select
-                                        className="rounded border appearance-none border-gray-400 py-2 focus:outline-none focus:border-red-500 text-base pl-3 pr-10"
-                                    >
-                                        <option>SM</option>
-                                        <option>M</option>
-                                        <option>L</option>
-                                        <option>XL</option>
-                                    </select>
-                                    <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-                                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-4 h-4" viewBox="0 0 24 24">
-                                        <path d="M6 9l6 6 6-6" />
-                                        </svg>
-                                    </span>
-                                    </div>
-                                </div>
+                                   <ButtonSize/>
                                 </div>
                                 <div className="flex">
-                                    <span className="title-font font-medium text-2xl text-gray-900">$58.00</span>
+                                    <span className="title-font font-medium text-2xl text-gray-900">{product["price"]["current"]["text"]}</span>
                                     <button
                                         type="button"
-                                        className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"
+                                        className={"flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"}
                                     >
                                         Add to cart
                                     </button>
@@ -127,7 +104,7 @@ export const DetailProductPage = () => {
                 </section>
                 <div className="font-sans bg-white">
                     <div className="p-6 lg:max-w-7xl max-w-4xl mx-auto">
-                        <Description/>
+                        <Description product={product}/>
                         <Review/>
                     </div>
                 </div>

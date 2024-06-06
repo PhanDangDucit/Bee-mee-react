@@ -11,7 +11,8 @@ export type TProduct = {
             text: string
         }
     },
-    imageUrl:string,
+    size: "M" | "L" | "S",
+    imageUrl: string,
     additionalImageUrls: Array<TImages>
 }
 
