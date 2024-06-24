@@ -1,5 +1,6 @@
 import { addOneEntity } from "@/utils/axios-method";
 import { createIdRondom } from "@/utils/create-id-random";
+import { encodedSlug } from "@/utils/slugify";
 import { useState } from "react";
 
 export const CreateModalCategories = () => {
@@ -7,13 +8,15 @@ export const CreateModalCategories = () => {
 
     const handleSubmit = () => {
         const id = createIdRondom();
+        const nameSlug = encodedSlug(name);
         const data = {
             id,
-            name
+            name: nameSlug
         }
         addOneEntity("categories", data);
         setName("");
     }
+
     return (
         <dialog
             id="createCategoriesModal"
