@@ -91,10 +91,10 @@ const Header = () => {
                     </NavLink>
                     <div className="text-accent-content">
                         <div className="dropdown dropdown-hover">
-                            <div tabIndex={0} role="button" className="bg-white cursor-pointer">Hover</div>
+                            <div tabIndex={0} role="button" className="bg-white cursor-pointer">Categories</div>
                             <ul tabIndex={0} className="dropdown-content menu bg-orange-100 rounded-box z-[1] w-52 p-2 shadow">
                                 {categories && categories.map((category) => (
-                                    <li key={category.id}><NavLink className="text-accent-content" to={`/categories/${category.name}`}>{category.name}</NavLink></li>
+                                    <li key={category.id}><NavLink className="text-accent-content" to={`/categories/${category.id}`}>{category.name}</NavLink></li>
                                 ))}
                             </ul>
                         </div>

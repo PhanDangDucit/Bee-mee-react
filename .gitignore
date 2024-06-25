@@ -4,3 +4,6 @@ server-express
 client
 Clothing-Ecommerce-Shop-In-React-JSON-Server
 server-express-mongo
+
+server-nodejs/__db
+server-nodejs/.env

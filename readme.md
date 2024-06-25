@@ -9,3 +9,11 @@
     }
 }
 ```
+
+# Backend
+
+```bash
+$ npm i express express-generator nodemon multer jsonwebtoken bcryptjs nodemailer module-alias cors helmet dotenv @babel/node  @babel/preset-env @babel/core
+```
+
+- [module-alias](https://www.npmjs.com/package/module-alias)
