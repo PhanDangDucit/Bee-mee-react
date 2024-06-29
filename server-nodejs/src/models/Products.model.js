@@ -8,18 +8,21 @@ const ProductSchema = new schema({
     id: Number,
     name: String,
     description: String,
-    categoryId: Number,
-    size: ["M", "L", "S"],
-    productionDate: { type: Date, default: Date.now },,
+    categoryId: {type: Number, ref: 'categories'},
+    size: {type: [String]}, // enum
+    productionDate: { type: Date, default: Date.now },
     price: {
         current: {
             value: Number,
             text: String
         }
     },
+    genre: {
+        type: [String] // Array<String>
+    },
     brandName: String,
     imageUrl: String,
-    additionalImageUrls: Array
+    additionalImageUrls: {type: [String]}
 });
 
 export const ProductModel = new mongoose.model("products", ProductSchema);
