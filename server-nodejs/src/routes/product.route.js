@@ -1,7 +1,12 @@
 import express from 'express';
+import { ProductController } from '../controllers/product.controller';
 
 const productRouter = express.Router()
 
-productRouter.get('/', )
+const productContructor = new ProductController();
 
-export {productRouter}
+productRouter.post('/', productContructor.addProduct)
+
+export {
+    productRouter
+}

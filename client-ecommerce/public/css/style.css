@@ -2609,11 +2609,6 @@ html:has(.drawer-toggle:checked) {
   margin-bottom: 1rem;
 }
 
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
 .\!ml-2 {
   margin-left: 0.5rem !important;
 }
@@ -4066,6 +4061,11 @@ html:has(.drawer-toggle:checked) {
 
 .active\:bg-white\/30:active {
   background-color: rgb(255 255 255 / 0.3);
+}
+
+.active\:bg-orange-300:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
 }
 
 .disabled\:pointer-events-none:disabled {

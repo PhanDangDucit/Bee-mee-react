@@ -1,7 +1,10 @@
 
 import mongoose from "mongoose";
 
-const schema = mongoose.schema;
+const {schema, model} = mongoose;
+
+const DOCUMENT_NAME = 'Product';
+const COLLECTION_NAME = 'Products';
 
 const ProductSchema = new schema({
     _id: false,
@@ -23,6 +26,8 @@ const ProductSchema = new schema({
     brandName: String,
     imageUrl: String,
     additionalImageUrls: {type: [String]}
+}, {
+    collection: COLLECTION_NAME
 });
 
-export const ProductModel = new mongoose.model("products", ProductSchema);
+export const ProductModel = model(DOCUMENT_NAME, ProductSchema);

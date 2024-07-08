@@ -1,7 +1,10 @@
 
 import mongoose from "mongoose";
 
-const schema = mongoose.schema;
+const { schema, model } = mongoose;
+
+const DOCUMENT_NAME = 'User';
+const COLLECTION_NAME = 'User';
 
 const UserSchema = new schema({
     _id: false,
@@ -12,8 +15,8 @@ const UserSchema = new schema({
     password: {type: String, required: true},
     // providerAuth: {type: [String], required: true},
     address: [{ type: Number, ref: 'address' }]
-}, { 
-    timestamps: true
+}, {
+    collection: COLLECTION_NAME,
 });
 
-export const ProductModel = new mongoose.model("products", UserSchema);
+export const ProductModel = new model(DOCUMENT_NAME, UserSchema);

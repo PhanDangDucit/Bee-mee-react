@@ -3,6 +3,7 @@ import { TCategories } from "@/helpers/definitions";
 import { getAllEntity } from "@/utils/axios-method";
 import { useEffect, useState } from "react";
 import "@/styles/Header.css";
+
 import { 
     CircleX, 
     Menu, 
@@ -49,12 +50,12 @@ const Header = () => {
                         {/* Sidebar content here */}
                         <li className="text-xl">
                             <NavLink className="text-accent-content" to="/">
-                            Home
+                                Home
                             </NavLink>
                         </li>
                         <li className="text-xl">
                             <NavLink className="text-accent-content" to="/shop">
-                            Shop
+                                Shop
                             </NavLink>
                         </li>
                         <li className="text-xl">
@@ -64,21 +65,21 @@ const Header = () => {
                         </li>
                         <li className="text-xl">
                             <NavLink className="text-accent-content" to="/contact">
-                            Contact
+                                Contact
                             </NavLink>
                         </li>
                         {!isLoggedIn && (
                             <>
-                            <li className="text-xl">
-                                <NavLink className="text-accent-content" to="/login">
-                                Login
-                                </NavLink>
-                            </li>
-                            <li className="text-xl">
-                                <NavLink className="text-accent-content" to="/register">
-                                Register
-                                </NavLink>
-                            </li>
+                                <li className="text-xl">
+                                    <NavLink className="text-accent-content" to="/login">
+                                    Login
+                                    </NavLink>
+                                </li>
+                                <li className="text-xl">
+                                    <NavLink className="text-accent-content" to="/register">
+                                    Register
+                                    </NavLink>
+                                </li>
                             </>
                         )}
                     </ul>
@@ -105,16 +106,7 @@ const Header = () => {
                     <NavLink className="text-accent-content" to="/contact">
                         Contact
                     </NavLink>
-                    {!isLoggedIn && (
-                        <>
-                            <NavLink className="text-accent-content" to="/login">
-                                Login
-                            </NavLink>
-                            <NavLink className="text-accent-content" to="/register">
-                                Register
-                            </NavLink>
-                        </>
-                    )}
+                   
                 </div>
             </div>
         </>

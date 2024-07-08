@@ -1,11 +1,10 @@
 
 
 
-import mongoose from "mongoose";
+import { schema, model } from "mongoose";
 
-const schema = mongoose.schema;
-
-
+const DOCUMENT_NAME = 'OrderItem';
+const COLLECTION_NAME = 'OrderItems';
 
 const CartItemSchema = new schema({
     _id: false,
@@ -30,7 +29,8 @@ const CartItemSchema = new schema({
     },
     quantity: {type: Number, required: true}
 }, {
+    collection: COLLECTION_NAME,
     timestamp: true
 });
 
-export const ProductModel = new mongoose.model("carts", CartItemSchema);
+export const ProductModel = new mongoose.model(DOCUMENT_NAME, CartItemSchema);

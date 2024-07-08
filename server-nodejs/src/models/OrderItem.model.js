@@ -2,7 +2,10 @@
 
 import mongoose from "mongoose";
 
-const schema = mongoose.schema;
+const { schema, model } = mongoose;
+
+const DOCUMENT_NAME = 'OrderItem';
+const COLLECTION_NAME = 'OrderItems';
 
 const OrderItemSchema = new schema({
     _id: false,
@@ -15,6 +18,9 @@ const OrderItemSchema = new schema({
     orderId: { type: Number, ref: 'products' },
     price: {type: Number, required: true},
     quantity: {type: Number, required: true}
+}, {
+    collection: COLLECTION_NAME,
+    timestamp: true
 });
 
-export const ProductModel = new mongoose.model("order_item", OrderItemSchema);
+export const ProductModel = new model(DOCUMENT_NAME, OrderItemSchema);

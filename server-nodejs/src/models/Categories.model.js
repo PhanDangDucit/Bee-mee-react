@@ -1,11 +1,14 @@
-import mongoose from "mongoose";
+import { schema, model } from "mongoose";
 
-const schema = mongoose.schema;
+const DOCUMENT_NAME = 'Category';
+const COLLECTION_NAME = 'Categories';
 
 const CategoriesSchema = new schema({
     _id: false,
     id: Number,
     name: String
+}, {
+    collection: COLLECTION_NAME
 });
 
-export const ProductModel = new mongoose.model("categories", CategoriesSchema);
+export const CategoriesModel = new model(DOCUMENT_NAME, CategoriesSchema);

@@ -4,7 +4,7 @@
       "id": "205082351",
       "name": "Walk London Milano lace up boots in black leather",
       "description": "Demo description",
-      "categoryId": 1,
+      "categoryId": "286624600",
       "size": [
         "M",
         "L",
@@ -30,7 +30,7 @@
       "id": "182738495",
       "name": "AN EXACT REPLICA OF THE MAN UTD PERFORMANCE JERSEY, INSPIRED BY HISTORY.",
       "description": "A century ago, vertical stripes were a familiar addition to Manchester United away shirts. For the 23/24 season, adidas dipped into the club's DNA to produce an authentic soccer jersey with a design that looks the part. The Manchester United 23/24 Away Authentic Jersey was created to perform. The lightweight shirt features HEAT.RDY that maximizes airflow so you can feel cool.. Standing out over those stripes, a heat-applied club badge signals your support for the legendary team. This garment is made with a yarn which contains 50% Parley Ocean Plastic — reimagined plastic waste, intercepted on remote islands, beaches, coastal communities and shorelines — preventing it from polluting our ocean.",
-      "categoryId": null,
+      "categoryId": "286624600",
       "size": [
         "M",
         "L",
@@ -55,7 +55,7 @@
       "id": "172839505",
       "name": "GG LINEN BLEND CANVAS SHIRT",
       "description": "Inspired by the summer spirit and beach clubs on the Italian coast, this item is part of Gucci Lido. Emblematic codes of the House and refined patterns are reinterpreted in contemporary ways for the Pre-Fall collection. This linen blend shirt is defined by the distinctive GG motif, paying homage to the House's founder, Guccio Gucci.",
-      "categoryId": 1,
+      "categoryId": "702182319",
       "size": [
         "M",
         "L",
@@ -81,7 +81,7 @@
       "id": "572839304",
       "name": "EXTRA FINE RIB WOOL AND SILK CARDIGAN",
       "description": "An essential part of the Pre-Fall collection's ready-to-wear-offering, knitwear with a fine touch and rich texture makes an ideal transition into the new season. This streamlined cardigan is presented in a fine rib wool and silk and defined by a subtle Gucci intarsia.",
-      "categoryId": 4,
+      "categoryId": "702182319",
       "size": [
         "M",
         "L",
@@ -107,7 +107,7 @@
       "id": "963827182",
       "name": "EXTRA FINE RIB WOOL AND SILK CARDIGAN",
       "description": "An essential part of the Pre-Fall collection's ready-to-wear-offering, knitwear with a fine touch and rich texture makes an ideal transition into the new season. This streamlined cardigan is presented in a fine rib wool and silk and defined by a subtle Gucci intarsia.",
-      "categoryId": 4,
+      "categoryId": "212882249",
       "size": [
         "M",
         "L",
@@ -133,7 +133,7 @@
       "id": "782910293",
       "name": "EXTRA FINE RIB WOOL AND SILK CARDIGAN",
       "description": "An essential part of the Pre-Fall collection's ready-to-wear-offering, knitwear with a fine touch and rich texture makes an ideal transition into the new season. This streamlined cardigan is presented in a fine rib wool and silk and defined by a subtle Gucci intarsia.",
-      "categoryId": 4,
+      "categoryId": "212882249",
       "size": [
         "M",
         "L",
@@ -159,7 +159,7 @@
       "id": "30656005",
       "name": "AN EXACT REPLICA OF THE MAN UTD PERFORMANCE JERSEY, INSPIRED BY HISTORY.",
       "description": "A century ago, vertical stripes were a familiar addition to Manchester United away shirts. For the 23/24 season, adidas dipped into the club's DNA to produce an authentic soccer jersey with a design that looks the part. The Manchester United 23/24 Away Authentic Jersey was created to perform. The lightweight shirt features HEAT.RDY that maximizes airflow so you can feel cool.. Standing out over those stripes, a heat-applied club badge signals your support for the legendary team. This garment is made with a yarn which contains 50% Parley Ocean Plastic — reimagined plastic waste, intercepted on remote islands, beaches, coastal communities and shorelines — preventing it from polluting our ocean.",
-      "categoryId": 4,
+      "categoryId": "702182319",
       "size": [
         "M",
         "L",
@@ -184,7 +184,7 @@
       "id": "64178994",
       "name": "Iphon1",
       "description": "svadvdsvdsbvdfbdfb",
-      "categoryId": 3,
+      "categoryId": "702182319",
       "size": [
         "M",
         "L",
@@ -204,32 +204,8 @@
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/66e42ae5526d4cc3b47058a6c68fa653_9366/Manchester_United_23-24_Away_Authentic_Jersey_Green_IP1824_DM1.jpg",
         "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/66e42ae5526d4cc3b47058a6c68fa653_9366/Manchester_United_23-24_Away_Authentic_Jersey_Green_IP1824_DM1.jpg"
       ]
-    },
-    {
-      "id": "939070568",
-      "name": "ascbasjcbjasbj",
-      "description": "hascbsabcjanscjsajcnsncksancksa",
-      "categoryId": 233575495,
-      "size": [
-        "M",
-        "L",
-        "S"
-      ],
-      "productionDate": "2024-06-07T10:18:33.438Z",
-      "price": {
-        "current": {
-          "value": 14,
-          "text": "$14.00"
-        }
-      },
-      "brandName": "asjcbscbjasacsca",
-      "imageUrl": "ddhfhfhfhfgh",
-      "additionalImageUrls": [
-        "ddhfhfhfhfgh",
-        "ddhfhfhfhfgh",
-        "ddhfhfhfhfgh"
-      ]
     }
+   
   ],
   "categories": [
     {
