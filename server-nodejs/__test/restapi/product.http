@@ -1,0 +1,31 @@
+POST http://localhost:8000/products
+Content-Type: application/json
+
+{
+    "name": "Walk London Milano lace up boots in black leather",
+    "description": "Demo description",
+    "categoryId": "286624600",
+    "size": [
+        "M",
+        "L",
+        "S"
+    ],
+    "productionDate": "2021-10-31T09:00:00.594Z",
+    "price": {
+    "current": {
+        "value": 115,
+        "text": "$115.00"
+    }
+    },
+    "brandName": "WALK LONDON",
+    "imageUrl": "https://images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-1-black",
+    "additionalImageUrls": [
+        "https://images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-1-black",
+        "https://images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-2",
+        "https://images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-3",
+        "https://images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-4"
+    ]
+}
+
+###
+GET http://localhost:8000/products

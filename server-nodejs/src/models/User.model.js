@@ -14,7 +14,11 @@ const UserSchema = new schema({
     email: {type: String, required: true},
     password: {type: String, required: true},
     // providerAuth: {type: [String], required: true},
-    address: [{ type: Number, ref: 'address' }]
+    address: [
+        {
+            id: { type: Number, ref: 'address' }
+        }
+    ]
 }, {
     collection: COLLECTION_NAME,
 });

@@ -1,11 +1,9 @@
-import { schema, model } from "mongoose";
+import { Schema, model } from "mongoose";
 
 const DOCUMENT_NAME = 'Category';
 const COLLECTION_NAME = 'Categories';
 
-const CategoriesSchema = new schema({
-    _id: false,
-    id: Number,
+const CategoriesSchema = new Schema({
     name: String
 }, {
     collection: COLLECTION_NAME

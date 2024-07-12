@@ -1,18 +1,16 @@
 
 import mongoose from "mongoose";
 
-const {schema, model} = mongoose;
+const {Schema, model} = mongoose;
 
 const DOCUMENT_NAME = 'Product';
 const COLLECTION_NAME = 'Products';
 
-const ProductSchema = new schema({
-    _id: false,
-    id: Number,
+const ProductSchema = new Schema({
     name: String,
     description: String,
     categoryId: {type: Number, ref: 'categories'},
-    size: {type: [String]}, // enum
+    size: {type: [String]},
     productionDate: { type: Date, default: Date.now },
     price: {
         current: {

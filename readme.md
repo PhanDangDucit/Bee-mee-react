@@ -17,3 +17,8 @@ $ npm i express express-generator nodemon multer jsonwebtoken bcryptjs nodemaile
 ```
 
 - [module-alias](https://www.npmjs.com/package/module-alias)
+
+
+```bash
+$  npm install --save multer
+```

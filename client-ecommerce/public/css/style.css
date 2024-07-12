@@ -4063,11 +4063,6 @@ html:has(.drawer-toggle:checked) {
   background-color: rgb(255 255 255 / 0.3);
 }
 
-.active\:bg-orange-300:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
-}
-
 .disabled\:pointer-events-none:disabled {
   pointer-events: none;
 }

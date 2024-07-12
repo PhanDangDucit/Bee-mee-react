@@ -1,5 +1,7 @@
+import { categoriesRouter } from "./categories.route";
 import { productRouter } from "./product.route";
 
-export function Routes(app) {
-    app.use('/product', productRouter);
+export function routes(app) {
+    app.use('/products', productRouter);
+    app.use('/categories', categoriesRouter);
 }
