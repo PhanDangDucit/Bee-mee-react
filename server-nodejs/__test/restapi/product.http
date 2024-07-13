@@ -1,3 +1,10 @@
+
+###
+GET http://localhost:8000/products
+
+###
+GET http://localhost:8000/products/6690ffbe26c24ab388de2b8d
+###
 POST http://localhost:8000/products
 Content-Type: application/json
 
@@ -26,6 +33,3 @@ Content-Type: application/json
         "https://images.asos-media.com/products/walk-london-milano-lace-up-boots-in-black-leather/205082351-4"
     ]
 }
-
-###
-GET http://localhost:8000/products

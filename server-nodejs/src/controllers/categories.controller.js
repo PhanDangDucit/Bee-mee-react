@@ -1,4 +1,5 @@
 import { CategoriesService } from "../services/categories.service";
+import { formartIdResponseDataMongoDb } from "../utils";
 
 const categoriesService = new CategoriesService();
 
@@ -7,8 +8,8 @@ export class CategoriesController {
     async getAllCategories(req, res, next) {
         try{
             console.log("Body::", req.body);
-            const data = await categoriesService.getAllCategories();
-            return res.json({data});
+            const categories = await categoriesService.getAllCategories();
+            return res.json({categories: formartIdResponseDataMongoDb(categories)});
         } catch (error) {
             next(error);
         }

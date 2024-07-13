@@ -1,3 +1,4 @@
+import { Types } from "mongoose";
 import { ProductModel } from "../models/Products.model";
 import createError from "http-errors";
 
@@ -12,8 +13,9 @@ export class ProductService {
     /**
      * Get one category
      */
-    async getOneProduct() {
-        const products = await ProductModel.findOne();
+    async getOneProduct(data) {
+        console.log("data", data);
+        const products = await ProductModel.findOne({_id: data.id});
         if(!products) {
             throw createError.Conflict("Get all products failed!")
         };
@@ -24,7 +26,7 @@ export class ProductService {
      * Get all categories
      */
     async getAllProducts() {
-        const products = await ProductModel.find().lean();
+        const products = await ProductModel.find({}, {"__v": 0}).lean();
         if(!products) throw createError.Conflict("Get All Product error!");
         return products;
     }

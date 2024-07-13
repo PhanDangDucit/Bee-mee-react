@@ -13,10 +13,11 @@ export const DetailProductPage = () => {
 
     useEffect(() => {
         if(id) {
-            getOneEntity("products", id).then(data => setProduct(data));
+            getOneEntity("products", id).then(({product}) => setProduct(product));
         }
     }, [id])
-    
+    console.log("Product::", product);
+
     if(!product) return;
     return (
         <LayoutUser>

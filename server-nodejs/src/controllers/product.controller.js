@@ -1,4 +1,5 @@
 import { ProductService } from "../services/product.service";
+import { formartIdResponseDataMongoDb, formartIdResponseDataMongoDbForOneObject } from "../utils";
 const productService = new ProductService();
 export class ProductController {
     /**
@@ -21,7 +22,14 @@ export class ProductController {
      * Get product
      */
     async getOneProduct(req, res, next) {
-        return productService.getOneProduct();
+        try {
+            console.log("req.params.productId ::>", req.params.productId);
+            const product = await productService.getOneProduct({id: req.params.productId});
+            console.log("product::>>", product);
+            res.json({product: formartIdResponseDataMongoDb(product)});
+        } catch (err) {
+            next(err);
+        }
     }
 
     /**
@@ -31,7 +39,7 @@ export class ProductController {
     async getAllProducts(req, res, next) {
         try {
             const products = await productService.getAllProducts();
-            res.json({products});
+            res.json({products: formartIdResponseDataMongoDb(products)});
         } catch (err) {
             next(err);
         }

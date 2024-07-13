@@ -10,12 +10,17 @@ import {
 } from "lucide-react";
 import { ToolBar } from "@/ui/toolbar";
 import { Navbar } from "@/ui/Navbar";
+import { nanoid } from "@reduxjs/toolkit";
 
 const Header = () => {
     const isLoggedIn = false;
     const [categories, setCategories] = useState<TCategories[]>();
+    console.log("categories::", categories);
     useEffect(() => {
-      getAllEntity("categories").then(data => setCategories(data));
+      getAllEntity("categories")
+        .then((
+            {categories}: {categories: TCategories[]}
+        ) => setCategories(categories));
     }, [])
 
     return (
@@ -95,7 +100,7 @@ const Header = () => {
                             <div tabIndex={0} role="button" className="bg-white cursor-pointer">Categories</div>
                             <ul tabIndex={0} className="dropdown-content menu bg-orange-100 rounded-box z-[1] w-52 p-2 shadow">
                                 {categories && categories.map((category) => (
-                                    <li key={category.id}><NavLink className="text-accent-content" to={`/categories/${category.id}`}>{category.name}</NavLink></li>
+                                    <li key={nanoid()}><NavLink className="text-accent-content" to={`/categories/${category.id}`}>{category.name}</NavLink></li>
                                 ))}
                             </ul>
                         </div>
