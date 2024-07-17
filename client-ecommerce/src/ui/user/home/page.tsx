@@ -10,8 +10,9 @@ export default function Page() {
     const [products, setProducts] = useState<TProduct[]>();
     
     useEffect(() => {
-        getAllEntity("products").then(({products})  => setProducts(products));
+        getAllEntity("products").then((products)  => setProducts(products));
     }, [])
+
     console.log("products::", products);
     if(!products) return null;
 

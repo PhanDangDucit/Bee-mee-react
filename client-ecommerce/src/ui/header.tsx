@@ -19,7 +19,7 @@ const Header = () => {
     useEffect(() => {
       getAllEntity("categories")
         .then((
-            {categories}: {categories: TCategories[]}
+            categories:  TCategories[]
         ) => setCategories(categories));
     }, [])
 

@@ -13,7 +13,7 @@ export const DetailProductPage = () => {
 
     useEffect(() => {
         if(id) {
-            getOneEntity("products", id).then(({product}) => setProduct(product));
+            getOneEntity("products", id).then((product) => setProduct(product));
         }
     }, [id])
     console.log("Product::", product);
