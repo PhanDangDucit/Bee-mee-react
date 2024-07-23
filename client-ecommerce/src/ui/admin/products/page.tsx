@@ -14,7 +14,7 @@ const ProductsComponent = () => {
     useEffect(() => {
         getAllEntity("products").then(data => setProducts(data));
         getAllEntity("categories").then(data => setCategories(data));
-    }, [products])
+    }, [])
 
     if(!products) return null;
     if(!categories) return null;

@@ -1,4 +1,4 @@
-import { addOneEntity } from "@/utils/axios-method"
+import { addOneEntity, getUrl } from "@/utils/axios-method"
 import { useState } from "react"
 import { TCategories, TProduct } from "@/helpers/definitions";
 import { createIdRondom } from "@/utils/create-id-random";
@@ -20,34 +20,63 @@ export const CreateModalProductsAdmin = ({
     const [imageUrl, setImage] = useState<string>("");
 
     const handleSubmit = () => {
-        const id = createIdRondom();
-        const data = {
-            id,
-            name,
-            description,
-            categoryId,
-            "size": [
-               "M",
-               "L",
-               "S"
-            ],
-            "productionDate": (new Date()).toISOString(),
-            "price": {
-                "current": {
-                    "value": price,
-                    "text": `$${price}.00`
-                }
-            },
-            brandName,
-            imageUrl,
-            "additionalImageUrls": [
+        if(getUrl() === "http://localhost:8080") {
+            const id = createIdRondom();
+            const data = {
+                id,
+                name,
+                description,
+                categoryId,
+                "size": [
+                   "M",
+                   "L",
+                   "S"
+                ],
+                "productionDate": (new Date()).toISOString(),
+                "price": {
+                    "current": {
+                        "value": price,
+                        "text": `$${price}.00`
+                    }
+                },
+                brandName,
                 imageUrl,
+                "additionalImageUrls": [
+                    imageUrl,
+                    imageUrl,
+                    imageUrl
+                ]
+            };
+            addOneEntity("products", data);
+            onSet([...products, data]);
+        } else {
+            const data = {
+                name,
+                description,
+                categoryId,
+                "size": [
+                   "M",
+                   "L",
+                   "S"
+                ],
+                "productionDate": (new Date()).toISOString(),
+                "price": {
+                    "current": {
+                        "value": price,
+                        "text": `$${price}.00`
+                    }
+                },
+                brandName,
                 imageUrl,
-                imageUrl
-            ]
-        };
-        addOneEntity("products", data);
-        onSet([...products, data]);
+                "additionalImageUrls": [
+                    imageUrl,
+                    imageUrl,
+                    imageUrl
+                ]
+            };
+            addOneEntity("products", data);
+            onSet([...products, data]);
+        }
         setName("")
         setBrandName("")
         setDesc("")
@@ -118,7 +147,10 @@ export const CreateModalProductsAdmin = ({
                                         id="create-product-category" 
                                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                         defaultValue={"Select category"}
-                                        onChange={(e) => setCategoryId(Number(e.target.value))}
+                                        onChange={(e) => {
+                                            setCategoryId(Number(e.target.value));
+                                            console.log("e.target.value:", e.target.value);
+                                        }}
                                     >
                                         {categories.map(
                                             (category) => (

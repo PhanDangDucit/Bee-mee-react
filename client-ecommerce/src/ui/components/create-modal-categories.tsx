@@ -1,4 +1,4 @@
-import { addOneEntity } from "@/utils/axios-method";
+import { addOneEntity, getUrl } from "@/utils/axios-method";
 import { createIdRondom } from "@/utils/create-id-random";
 import { encodedSlug } from "@/utils/slugify";
 import { useState } from "react";
@@ -7,13 +7,23 @@ export const CreateModalCategories = () => {
     const [name, setName] = useState<string>();
 
     const handleSubmit = () => {
-        const id = createIdRondom();
-        const nameSlug = encodedSlug(name);
-        const data = {
-            id,
-            name: nameSlug
+        let id = "";
+        if(getUrl() === "http://localhost:8080") {
+            id = createIdRondom();
+            const nameSlug = encodedSlug(name);
+            const data = {
+                id,
+                name: nameSlug
+            }
+            addOneEntity("categories", data);
         }
-        addOneEntity("categories", data);
+        else {
+            const nameSlug = encodedSlug(name);
+            const data = {
+                name: nameSlug
+            }
+            addOneEntity("categories", data);
+        }
         setName("");
     }
 

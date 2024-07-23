@@ -17,16 +17,32 @@ export class ProductController {
             next(error);
         }
     }
+    
+    /**
+     * Delete product
+     */
+    async deleteProduct(req, res, next) {
+        try{
+            console.log("Body::", req.params);
+            await productService.deleteProduct(req.params.productId);
+            return res.json({
+                status: 201,
+                messsage: "Success!"
+            });
+        } catch (error) {
+            next(error);
+        }
+    }
 
     /**
      * Get product
      */
     async getOneProduct(req, res, next) {
         try {
-            console.log("req.params.productId ::>", req.params.productId);
+            // console.log("req.params.productId ::>", req.params.productId);
             const product = await productService.getOneProduct({id: req.params.productId});
-            console.log("product::>>", product);
-            res.json({product: formartIdResponseDataMongoDb(product)});
+            // console.log("product::>>", product);
+            res.json(formartIdResponseDataMongoDb(product));
         } catch (err) {
             next(err);
         }
@@ -39,35 +55,9 @@ export class ProductController {
     async getAllProducts(req, res, next) {
         try {
             const products = await productService.getAllProducts();
-            res.json({products: formartIdResponseDataMongoDb(products)});
+            res.json(formartIdResponseDataMongoDb(products));
         } catch (err) {
             next(err);
         }
     } 
 }
-
-// const data = {
-//     id,
-//     name,
-//     description,
-//     categoryId,
-//     "size": [
-//        "M",
-//        "L",
-//        "S"
-//     ],
-//     "productionDate": (new Date()).toISOString(),
-//     "price": {
-//         "current": {
-//             "value": price,
-//             "text": `$${price}.00`
-//         }
-//     },
-//     brandName,
-//     imageUrl,
-//     "additionalImageUrls": [
-//         imageUrl,
-//         imageUrl,
-//         imageUrl
-//     ]
-// };

@@ -6,8 +6,10 @@ const categoriesRouter = express.Router();
 
 const categoriesContructor = new CategoriesController();
 
-categoriesRouter.post('/', categoriesContructor.addCategory);
+categoriesRouter.get('/:categoryId', categoriesContructor.getCategory);
+categoriesRouter.delete('/:categoryId', categoriesContructor.deleteCategory);
 categoriesRouter.get('/', categoriesContructor.getAllCategories);
+categoriesRouter.post('/', categoriesContructor.addCategory);
 
 export {
     categoriesRouter

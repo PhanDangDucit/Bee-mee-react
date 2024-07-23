@@ -12,7 +12,7 @@ const CategoriesComponent = () => {
 
     useEffect(() => {
         getAllEntity("categories").then(data => setCategories(data));
-    }, [categories])
+    }, [])
 
     if(!categories) return;
 
@@ -38,7 +38,7 @@ const CategoriesComponent = () => {
                                             onClick={() => document.getElementById('createCategoriesModal')!.showModal()}
                                         >
                                             <Plus/>
-                                            Add Product
+                                            Add Category
                                         </button>
                                     </div>
                                 </div>

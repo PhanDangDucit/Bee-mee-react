@@ -11,10 +11,16 @@ export class ProductService {
     }
 
     /**
+     * 
+     */
+    async deleteProduct(productId) {
+        await ProductModel.deleteOne({_id: productId});
+    }
+
+    /**
      * Get one category
      */
     async getOneProduct(data) {
-        console.log("data", data);
         const products = await ProductModel.findOne({_id: data.id});
         if(!products) {
             throw createError.Conflict("Get all products failed!")

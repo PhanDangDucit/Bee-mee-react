@@ -1,8 +1,9 @@
 
 import axios from "axios";
 
-const getUrl = () => {
-    return "http://localhost:8080";
+export const getUrl = () => {
+    // return "http://localhost:8080";
+    return "http://localhost:8000";
 }
 
 export const getAllEntity = async(entity: string) => {
@@ -36,4 +37,3 @@ export const deleteEntity = async(entity:string, id:string) => {
     const url = getUrl();
     axios.delete(`${url}/${entity}/${id}`)
 }
-
