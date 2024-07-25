@@ -59,5 +59,20 @@ export class ProductController {
         } catch (err) {
             next(err);
         }
-    } 
+    }
+
+    /**
+     * Update product
+     */
+    async updateProduct(req, res, next) {
+        try {
+            await productService.updateProduct(req.body, req.params.productId);
+            return res.json({
+                status: 201,
+                messsage: "Success!"
+            });
+        } catch (err) {
+            next(err);
+        }
+    }
 }

@@ -1,5 +1,5 @@
-import { addOneEntity, getUrl } from "@/utils/axios-method"
-import { useState } from "react"
+import { addOneEntity, getAllEntity, getUrl } from "@/utils/axios-method"
+import { useEffect, useState } from "react"
 import { TCategories, TProduct } from "@/helpers/definitions";
 import { createIdRondom } from "@/utils/create-id-random";
 
@@ -19,6 +19,10 @@ export const CreateModalProductsAdmin = ({
     const [price, setPrice] = useState<number>(0);
     const [imageUrl, setImage] = useState<string>("");
 
+    // useEffect(() => {
+    //     getAllEntity("categories").then(data => setCategoryId(data[0].id));
+    // }, [])
+    
     const handleSubmit = () => {
         if(getUrl() === "http://localhost:8080") {
             const id = createIdRondom();

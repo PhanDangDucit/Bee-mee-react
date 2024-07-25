@@ -36,4 +36,27 @@ export class ProductService {
         if(!products) throw createError.Conflict("Get All Product error!");
         return products;
     }
+    /**
+     * update product
+     */
+    async updateProduct(product, productId) {
+        const updateSet = {
+            name: product.name,
+            description: product.description,
+            categoryId: product.categoryId,
+            productionDate: product.productionDate,
+            price: {
+                current: {
+                    value: Number(product.price.current.value),
+                    text: String(product.price.current.text)
+                }
+            },
+            genre: "",
+            brandName: product.brandName,
+            imageUrl: product.imageUrl,
+            additionalImageUrls: product.additionalImageUrls 
+        }
+        const options = {upsert: true, new: true};
+        await ProductModel.updateOne({_id: productId}, {$set: updateSet}, options);
+    }
 }

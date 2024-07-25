@@ -1,16 +1,18 @@
 import { TCategories, TProduct } from "@/helpers/definitions";
-import {  editOneEntity } from "@/utils/axios-method";
-import { useState } from "react";
+import {  editOneEntity, getAllEntity } from "@/utils/axios-method";
+import { useEffect, useState } from "react";
 
 
 export const UpdateModalProductsAdmin = ({
     product,
-    // onSet,
+    onSet,
+    products,
     categories
 }:{
     product: TProduct,
-    // onSet: React.Dispatch<React.SetStateAction<TProduct[] | undefined>>,
-    categories: TCategories[]
+    onSet: React.Dispatch<React.SetStateAction<TProduct[] | undefined>>,
+    categories: TCategories[],
+    products: TProduct[]
 }) => {
     const [name, setName] = useState<string>(product["name"]);
     const [brandName, setBrandName] = useState<string>(product["brandName"]);
@@ -18,7 +20,9 @@ export const UpdateModalProductsAdmin = ({
     const [categoryId, setCategoryId] = useState<number>(product["categoryId"]);
     const [price, setPrice] = useState<number>(product["price"]["current"]["value"]);
     const [imageUrl, setImage] = useState<string>(product["imageUrl"]);
-
+    // useEffect(() => {
+    //     getAllEntity("categories").then(data => setCategoryId(data[0].id));
+    // }, [])
     if (!product) return;
 
     const handleSubmit = () => {
@@ -48,7 +52,14 @@ export const UpdateModalProductsAdmin = ({
                 imageUrl
             ]
         };
-        editOneEntity("products", data, id);
+        editOneEntity("products", data, id!);
+        products.find((p, index) => {
+            if(id == p.id) {
+                products.splice(index, 1, data);
+            }
+        });
+        console.log("Products::>><><>", products);
+        onSet([...products])
     }
     return (
         <dialog
@@ -119,7 +130,7 @@ export const UpdateModalProductsAdmin = ({
                                     {categories.map(
                                         (category) => (
                                             <option value={category["id"]} key={category["id"]}>
-                                                {category["id"]}
+                                                {category["name"]}
                                             </option>
                                         )
                                     )}

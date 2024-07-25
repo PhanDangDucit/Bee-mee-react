@@ -2,11 +2,12 @@ import { TCategories, TProduct } from "@/helpers/definitions"
 import { deleteEntity } from "@/utils/axios-method"
 import { UpdateModalProductsAdmin } from "@/ui/components/edit-modal-products";
 import { UpdateModalCategoriesAdmin } from "@/ui/components//edit-modal-categories";
+import { nanoid } from "@reduxjs/toolkit";
 
 export const TableProducts = ({
     products,
     onSet,
-    categories
+    categories,
 }:{
     products: TProduct[],
     onSet: React.Dispatch<React.SetStateAction<TProduct[] | undefined>>,
@@ -34,7 +35,7 @@ export const TableProducts = ({
             </thead>
             <tbody>
                 {products && products.map((product)=> (
-                    <tr className="border-b dark:border-gray-700" key={product['id']}>
+                    <tr className="border-b dark:border-gray-700" key={nanoid()}>
                         <td className="px-4 py-3 max-w-[12rem] truncate">{product["name"]}</td>
                         <td className="px-4 py-3">{product["categoryId"]}</td>
                         <td className="px-4 py-3">{product["brandName"]}</td>
@@ -60,6 +61,8 @@ export const TableProducts = ({
                                     <UpdateModalProductsAdmin
                                         product={product}
                                         categories={categories}
+                                        onSet={onSet}
+                                        products={products}
                                     />
                                 </li>
                                 <li>
