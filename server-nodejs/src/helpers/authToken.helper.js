@@ -25,7 +25,6 @@ export function createToken(email) {
  */
 export const isUserExists = async (email) => {
     const user = await UserModel.findOne({ email }).lean();
-    console.log("ascnackak", user);
     if(!user) return false;
     return user;
 }
@@ -35,6 +34,6 @@ export const isUserExists = async (email) => {
  */
 export const isCorrectPassword = async ({email, password}) => {
     const user = await UserModel.findOne({ email, password }).lean();
-    if(!user) return true;
-    return false;
+    if(!user) return false;
+    return user;
 }

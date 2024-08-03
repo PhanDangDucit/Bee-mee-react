@@ -8,11 +8,12 @@ import { routes } from './routes/index.route';
 config();
 const app = express();
 import createError from "http-errors";
+import getConnectionMysql from './configs/mysql.config';
 
 /**
  * Connect database
  */
-
+getConnectionMysql();
 ConnectMongo();
 
 /**

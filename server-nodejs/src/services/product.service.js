@@ -1,7 +1,9 @@
 import { Types } from "mongoose";
 import { ProductModel } from "../models/Products.model";
 import createError from "http-errors";
+import { MysqlQuery } from "../utils/mysql.query.util";
 
+const {findAll} = new MysqlQuery();
 export class ProductService {
     /**
      * 
@@ -58,5 +60,11 @@ export class ProductService {
         }
         const options = {upsert: true, new: true};
         await ProductModel.updateOne({_id: productId}, {$set: updateSet}, options);
+    }
+
+    async getAllProductsMysql() {
+        const data = await findAll("products");
+        if(!data) throw new Error("No products found!") ;
+        return data;
     }
 }

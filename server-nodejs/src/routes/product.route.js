@@ -4,6 +4,7 @@ const productRouter = express.Router()
 
 const productContructor = new ProductController();
 
+productRouter.get('/list/test', productContructor.getAllProductsMysql);
 productRouter.get('/:productId', productContructor.getOneProduct);
 productRouter.delete('/:productId', productContructor.deleteProduct);
 productRouter.put('/:productId', productContructor.updateProduct);

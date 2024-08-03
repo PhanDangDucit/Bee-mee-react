@@ -1,6 +1,7 @@
 import { ProductService } from "../services/product.service";
 import { formartIdResponseDataMongoDb, formartIdResponseDataMongoDbForOneObject } from "../utils";
 const productService = new ProductService();
+
 export class ProductController {
     /**
      * Add product
@@ -74,5 +75,10 @@ export class ProductController {
         } catch (err) {
             next(err);
         }
+    }
+
+    async getAllProductsMysql(req, res, next) {
+        const products = await productService.getAllProductsMysql();
+        return res.json({products});
     }
 }

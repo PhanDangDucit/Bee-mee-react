@@ -8,11 +8,19 @@ export default function Register() {
   // const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  console.log("password::", password);
   // const [confirmPassword, setConfirmPassword] = useState("");
   // const [phone, setPhone] = useState("");
   // const [adress, setAdress] = useState("");
-  const signup = () => {
-    auth("signup", {email, password});
+  const signup = async() => {
+    const data = await auth("signup", {email, password});
+    if(data.status == "200") {
+      const url = new URL("/signin", "http://localhost:3003");
+      location.href = url.toString();
+    } else {
+      setEmail("");
+      setPassword("");
+    }
   }
 
   return (
@@ -79,7 +87,7 @@ export default function Register() {
                 id="password"
                 type="password"
                 className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
-                defaultValue={password}
+                value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required={true}
               />

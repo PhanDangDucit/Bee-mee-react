@@ -9,8 +9,21 @@ const proceedLogin = () => {
 export default function LoginPage() {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
-    const login = () => {
-        auth("login", {email, password});
+    const login = async () => {
+        const data = await auth("login", {email, password});
+        console.log("data", data);
+        if(data.status == "200") {
+            if(data.metadata.user.role == "admin") {
+                const url = new URL("/admin", "http://localhost:3003");
+                location.href = url.toString();
+            } else if(data.metadata.user.role == "user") {
+                const url = new URL("/", "http://localhost:3003");
+                location.href = url.toString();
+            }
+        } else {
+            setEmail("");
+            setPassword("");
+        }
     }
     return (
         <>
@@ -18,7 +31,7 @@ export default function LoginPage() {
             <div className="flex flex-col justify-center sm:py-12">
                 <div className="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
                 <div className="bg-dark border border-gray-600 shadow w-full rounded-lg divide-y divide-gray-200">
-                    <form className="px-5 py-7" onSubmit={proceedLogin}>
+                    <form className="px-5 py-7">
                         <label className="font-semibold text-sm pb-1 block text-accent-content">
                             E-mail
                         </label>
@@ -42,7 +55,7 @@ export default function LoginPage() {
                             className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
                         />
                         <button
-                            type="submit"
+                            type="button"
                             onClick={login}
                             className="transition duration-200 bg-blue-600 hover:bg-blue-500 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"
                         >
