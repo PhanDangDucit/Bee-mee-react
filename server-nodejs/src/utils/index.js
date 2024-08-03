@@ -1,24 +1,17 @@
 
-export const unSelectFieldsInMongoDB = () => {
-
+export const formartOneIdDataMongoDb= (data) => {
+    const {_id, ...rest} = data;
+    return {id: data._id, ...rest}
 }
 
 export const formartIdResponseDataMongoDb = (data) => {
-    // array
-    for (const field in data) {
-        const {_id} = data[field];
-        if(_id) {
-            data[field].id = data[field]._id;
-            delete data[field]._id;
-        } else {
-            break;
-        }
+    if(Array.isArray(data)) {
+        return data.map((item) => formartOneIdDataMongoDb(item));
     }
-    // object
-    if(data._id) {
-        data.id = data._id;
-        delete data._id;
-    }
-    console.log("data::>>>>>>>>>", data);
-    return data;
+    return formartOneIdDataMongoDb(data);
+}
+
+export const getUrl = () => {
+    const urlDev = process.env.DEV_URL + ":" + process.env.PORT;
+    return process.env.NODE_ENV !== 'production' ? urlDev : ""
 }

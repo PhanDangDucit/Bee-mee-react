@@ -2,6 +2,7 @@ import { addOneEntity, getAllEntity, getUrl } from "@/utils/axios-method"
 import { useEffect, useState } from "react"
 import { TCategories, TProduct } from "@/helpers/definitions";
 import { createIdRondom } from "@/utils/create-id-random";
+import { FormUploadImage } from "./form-upload-image";
 
 export const CreateModalProductsAdmin = ({
     products,
@@ -19,9 +20,9 @@ export const CreateModalProductsAdmin = ({
     const [price, setPrice] = useState<number>(0);
     const [imageUrl, setImage] = useState<string>("");
 
-    // useEffect(() => {
-    //     getAllEntity("categories").then(data => setCategoryId(data[0].id));
-    // }, [])
+    useEffect(() => {
+        getAllEntity("categories").then(data => setCategoryId(data[0].id));
+    }, [])
     
     const handleSubmit = () => {
         if(getUrl() === "http://localhost:8080") {
@@ -181,7 +182,7 @@ export const CreateModalProductsAdmin = ({
                                         onChange={(e) => setDesc(e.target.value)}
                                     />
                                 </div>
-                                <div className="sm:col-span-2">
+                                {/* <div className="sm:col-span-2">
                                     <label 
                                         htmlFor="create-product-image" 
                                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -196,7 +197,8 @@ export const CreateModalProductsAdmin = ({
                                         defaultValue={imageUrl}
                                         onChange={(e) => setImage(e.target.value)}
                                     />
-                                </div>
+                                </div> */}
+                                <FormUploadImage onSet={setImage}/>
                             </div>
                             <form method="dialog">
                                 <button 

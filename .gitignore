@@ -7,3 +7,4 @@ server-express-mongo
 
 server-nodejs/__db
 server-nodejs/.env
+server-nodejs/public/img/*

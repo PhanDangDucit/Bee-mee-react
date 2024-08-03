@@ -59,7 +59,7 @@ export const Review = () => {
                     </div>
                     <div>
                     <div className="flex items-start">
-                        <img src="https://readymadeui.com/team-2.webp" className="w-12 h-12 rounded-full border-2 border-white" />
+                        <img src="https://readymadeui.com/team-2.webp" className="w-12 h-12 rounded-full border-2 border-white" alt="" />
                         <div className="ml-3">
                             <h4 className="text-sm font-bold text-[#333]">John Doe</h4>
                             <div className="flex space-x-1 mt-1">

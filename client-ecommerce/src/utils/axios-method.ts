@@ -37,3 +37,14 @@ export const deleteEntity = async(entity:string, id:string) => {
     const url = getUrl();
     axios.delete(`${url}/${entity}/${id}`)
 }
+
+export const uploadOneImage = async(file: File, fieldFile: string) => {
+    const url = getUrl();
+    const formData = new FormData();
+    formData.append(fieldFile, file);
+    return (await axios.post(`${url}/images/upload`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+    })).data
+}

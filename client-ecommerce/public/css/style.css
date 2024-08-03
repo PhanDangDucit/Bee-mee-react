@@ -2909,6 +2909,10 @@ html:has(.drawer-toggle:checked) {
   max-width: 40px;
 }
 
+.max-w-\[550px\] {
+  max-width: 550px;
+}
+
 .max-w-full {
   max-width: 100%;
 }
@@ -3185,6 +3189,11 @@ html:has(.drawer-toggle:checked) {
   border-color: rgb(51 51 51 / var(--tw-border-opacity));
 }
 
+.border-\[\#e0e0e0\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(224 224 224 / var(--tw-border-opacity));
+}
+
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
@@ -3387,6 +3396,10 @@ html:has(.drawer-toggle:checked) {
   padding: 2.5rem;
 }
 
+.p-12 {
+  padding: 3rem;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -3432,9 +3445,19 @@ html:has(.drawer-toggle:checked) {
   padding-right: 1.5rem;
 }
 
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
 }
 
 .py-1 {
@@ -3644,6 +3667,11 @@ html:has(.drawer-toggle:checked) {
 
 .tracking-widest {
   letter-spacing: 0.1em;
+}
+
+.text-\[\#07074D\] {
+  --tw-text-opacity: 1;
+  color: rgb(7 7 77 / var(--tw-text-opacity));
 }
 
 .text-\[\#333\] {
