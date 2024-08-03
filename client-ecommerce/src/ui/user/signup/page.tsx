@@ -1,37 +1,38 @@
 import SectionTitle from "@/ui/components/section-title";
+import { auth } from "@/utils/axios-method";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Register() {
-  const [name, setName] = useState("");
-  const [lastname, setLastname] = useState("");
+  // const [name, setName] = useState("");
+  // const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [phone, setPhone] = useState("");
-  const [adress, setAdress] = useState("");
-
-  const handleSubmit = () => {
-    
+  // const [confirmPassword, setConfirmPassword] = useState("");
+  // const [phone, setPhone] = useState("");
+  // const [adress, setAdress] = useState("");
+  const signup = () => {
+    auth("signup", {email, password});
   }
+
   return (
     <>
       <SectionTitle title="Register" path="Home | Register" />
       <div className="flex flex-col justify-center sm:py-12">
         <div className="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
           <div className="bg-dark border border-gray-600 shadow w-full rounded-lg divide-y divide-gray-200">
-            <form className="px-5 py-7" onSubmit={handleSubmit}>
-              <label className="font-semibold text-sm pb-1 block text-accent-content">
+            <form className="px-5 py-7">
+              {/* <label className="font-semibold text-sm pb-1 block text-accent-content">
                 Name
-              </label>
-              <input
+              </label> */}
+              {/* <input
                 type="text"
                 className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required={true}
-              />
-              <label className="font-semibold text-sm pb-1 block text-accent-content">
+              /> */}
+              {/* <label className="font-semibold text-sm pb-1 block text-accent-content">
                 Lastname
               </label>
               <input
@@ -40,7 +41,7 @@ export default function Register() {
                 value={lastname}
                 onChange={(e) => setLastname(e.target.value)}
                 required={true}
-              />
+              /> */}
               <label className="font-semibold text-sm pb-1 block text-accent-content">
                 E-mail
               </label>
@@ -51,7 +52,7 @@ export default function Register() {
                 onChange={(e) => setEmail(e.target.value)}
                 required={true}
               />
-              <label className="font-semibold text-sm pb-1 block text-accent-content">
+              {/* <label className="font-semibold text-sm pb-1 block text-accent-content">
                 Phone
               </label>
               <input
@@ -60,8 +61,8 @@ export default function Register() {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required={true}
-              />
-              <label className="font-semibold text-sm pb-1 block text-accent-content">
+              /> */}
+              {/* <label className="font-semibold text-sm pb-1 block text-accent-content">
                 Adress
               </label>
               <input
@@ -70,17 +71,19 @@ export default function Register() {
                 value={adress}
                 onChange={(e) => setAdress(e.target.value)}
                 required={true}
-              />
-              <label className="font-semibold text-sm pb-1 block text-accent-content">
+              /> */}
+              <label className="font-semibold text-sm pb-1 block text-accent-content" htmlFor="password">
                 Password
               </label>
               <input
+                id="password"
                 type="password"
                 className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
-                value={password}
+                defaultValue={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required={true}
               />
+              {/*
               <label className="font-semibold text-sm pb-1 block text-accent-content">
                 Repeat Password
               </label>
@@ -90,9 +93,10 @@ export default function Register() {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required={true}
-              />
+              /> */}
               <button
-                type="submit"
+                type="button"
+                onClick={signup}
                 className="transition duration-200 bg-blue-600 hover:bg-blue-500 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"
               >
                 <span className="inline-block mr-2">Register</span>

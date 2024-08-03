@@ -23,6 +23,7 @@ export class AuthController {
 
     signup = async(req, res, next) => {
         try{
+            console.log(req.body);
             await authService.signup(req.body);
             return res.json({
                 status: 200,

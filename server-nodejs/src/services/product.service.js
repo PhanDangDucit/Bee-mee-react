@@ -21,7 +21,7 @@ export class ProductService {
      * Get one category
      */
     async getOneProduct(data) {
-        const products = await ProductModel.findOne({_id: data.id});
+        const products = await ProductModel.findOne({_id: data.id}).lean();
         if(!products) {
             throw createError.Conflict("Get all products failed!")
         };

@@ -48,3 +48,12 @@ export const uploadOneImage = async(file: File, fieldFile: string) => {
         }
     })).data
 }
+
+export const auth = (path: string, data : {email: string, password: string}) => {
+    const url = getUrl();
+    axios({
+        method: 'post',
+        url: `${url}/auth/${path}`,
+        data
+    });
+}

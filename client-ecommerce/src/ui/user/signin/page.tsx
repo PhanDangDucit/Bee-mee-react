@@ -1,4 +1,5 @@
 import SectionTitle from "@/ui/components/section-title";
+import { auth } from "@/utils/axios-method";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -6,8 +7,11 @@ const proceedLogin = () => {
 
 }
 export default function LoginPage() {
-    const [email, setEmail] = useState<string>();
-    const [password, setPassword] = useState<string>();
+    const [email, setEmail] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const login = () => {
+        auth("login", {email, password});
+    }
     return (
         <>
             <SectionTitle title="Login" path="Home | Login" />
@@ -39,6 +43,7 @@ export default function LoginPage() {
                         />
                         <button
                             type="submit"
+                            onClick={login}
                             className="transition duration-200 bg-blue-600 hover:bg-blue-500 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"
                         >
                             <span className="inline-block mr-2">Login</span>

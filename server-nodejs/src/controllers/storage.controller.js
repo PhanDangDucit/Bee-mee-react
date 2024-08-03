@@ -27,7 +27,9 @@ export class StorageController {
      */
     async getImage(req, res, next) {
         try{
-            const url = getUrl();
+            // req.headers.referer = "no-referrer";
+            // req.headers["sec-fetch-site"] = "none";
+            // console.log(req.headers);
             const {filename} = req.params;
             return res.sendFile("img/" + filename, {root: "public"});
         } catch (error) {

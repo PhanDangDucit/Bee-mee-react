@@ -16,9 +16,10 @@ export class AuthService {
     }
 
     signup = async (data) => {
-        const user = isUserExists()
-        if(user) throw new Error(`This account is already exists!`);
+        console.log(data);
+        const isExists = await isUserExists(data.email);
+        console.log("12421:", isExists);
+        if(isExists) throw new Error(`This account is already exists!`);
         await UserModel.create(data);
-        return { user }
     }
 }

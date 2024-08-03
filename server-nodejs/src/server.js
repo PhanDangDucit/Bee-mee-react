@@ -20,11 +20,11 @@ ConnectMongo();
  */
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(helmet()); // security
+app.use(helmet({
+    crossOriginResourcePolicy: { policy: "cross-origin" },
+})); // security
 app.use(cors()); // cross-origin
 app.use(compression());
-
-
 
 /**
  * routing
