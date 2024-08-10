@@ -4,6 +4,7 @@ import axios from "axios";
 export const getUrl = () => {
     // return "http://localhost:8080";
     return "http://localhost:8000";
+    // return "http://localhost:3003";
 }
 
 export const getAllEntity = async(entity: string) => {

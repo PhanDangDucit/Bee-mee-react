@@ -3,9 +3,6 @@ import { auth } from "@/utils/axios-method";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const proceedLogin = () => {
-
-}
 export default function LoginPage() {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");

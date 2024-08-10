@@ -9,6 +9,8 @@ config();
 const app = express();
 import createError from "http-errors";
 import getConnectionMysql from './configs/mysql.config';
+import cookieParser from "cookie-parser";
+
 
 /**
  * Connect database
@@ -26,6 +28,7 @@ app.use(helmet({
 })); // security
 app.use(cors()); // cross-origin
 app.use(compression());
+app.use(cookieParser())
 
 /**
  * routing

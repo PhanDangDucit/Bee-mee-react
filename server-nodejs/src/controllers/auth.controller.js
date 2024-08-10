@@ -1,13 +1,23 @@
 import { AuthService } from "../services/auth.service";
 import { formartIdResponseDataMongoDb } from "../utils";
+// import cookiesSession from "cookie-session";
 
 const authService = new AuthService();
 
 export class AuthController {
     login = async(req, res, next) => {
         try{
-            const {user, token} = await authService.login(req.body);
+            const { user, token } = await authService.login(req.body);
             res.setHeader("authorization", "Bearer" + " " + token);
+            res.cookie('authToken', token, {
+                httpOnly: true,
+                // path: '/',
+                sameSite: false,
+                secure: true
+                // domain: 'http://localhost:3003', // If needed
+            });
+            // res.send()
+            res.setHeader("Set-Cookie", [`authToken=${token}; Max-Age=${5000}; same-size=false`]);
             return res.json({
                 status: 200,
                 message: "login successful",
