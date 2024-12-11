@@ -1,0 +1,6 @@
+node_modules
+__test
+__db
+.gitignore
+.gitignore
+dockerfile

@@ -11,7 +11,6 @@ import createError from "http-errors";
 import getConnectionMysql from './configs/mysql.config';
 import cookieParser from "cookie-parser";
 
-
 /**
  * Connect database
  */

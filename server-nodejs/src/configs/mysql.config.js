@@ -6,12 +6,20 @@ import mysql from 'mysql2/promise';
  */
 async function getConnectionMysql() {
     try {
+        // const conn = await mysql.createConnection({
+        //     host: '127.0.0.1',
+        //     user: 'root',
+        //     password: 'Mysql@23012024@root',
+        //     port: 3306,
+        //     database: 'type_node',
+        //     insecureAuth: true
+        // })
         const conn = await mysql.createConnection({
             host: '127.0.0.1',
             user: 'root',
-            password: 'Mysql@23012024@root',
-            port: 3306,
-            database: 'type_node',
+            password: 'password',
+            port: 3360,
+            database: 'test',
             insecureAuth: true
         })
         console.log("Connect mysql ok!");
